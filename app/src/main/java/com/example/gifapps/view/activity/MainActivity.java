@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Button;
 
 import com.example.gifapps.view.fragment.GifFragment;
 import com.example.gifapps.R;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     private Fragment selectedFragment = new GifFragment();
     private BottomNavigationView bottomNavigationView;
+    private Button button;
 
     private static String BASE_IMAGE_URL = "https://image.tmdb.org/t/p/w185/";
 
@@ -26,8 +28,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         bottomNavigationView = findViewById(R.id.activitymain_bottomnav);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
-    }
 
+        }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()){
@@ -54,4 +56,5 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         }
         return false;
     }
+
 }

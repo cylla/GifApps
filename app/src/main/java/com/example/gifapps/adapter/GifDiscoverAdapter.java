@@ -4,11 +4,11 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -46,7 +46,10 @@ public class GifDiscoverAdapter extends RecyclerView.Adapter<GifDiscoverAdapter.
                 .getMedia().get(0).getGif().getUrl())
                 .into(holder.ivThumb);
 
-    }
+        holder.tvTitle.setText(gifDiscoverItems.get(position).getTitle());
+        holder.tvShare.setText(String.valueOf(gifDiscoverItems.get(position).getShares()));
+
+        }
 
     @Override
     public int getItemCount() {
@@ -55,10 +58,14 @@ public class GifDiscoverAdapter extends RecyclerView.Adapter<GifDiscoverAdapter.
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView ivThumb;
-
+        TextView tvTitle,tvShare;
+        Button button;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             ivThumb = itemView.findViewById(R.id.itemlist_iv_thumbnail);
+            tvTitle = itemView.findViewById(R.id.itemlist_tv_title);
+            tvShare = itemView.findViewById(R.id.itemlist_tv_share);
+            button = itemView.findViewById(R.id.button_share);
         }
     }
 }
