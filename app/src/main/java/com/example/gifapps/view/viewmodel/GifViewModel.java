@@ -13,7 +13,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class GifViewModel {
+public class GifViewModel extends ViewModel {
     private ApiMain apiMain;
 
     private MutableLiveData<ArrayList<GifDiscoverResultsItem>> listDiscoverGif = new MutableLiveData<>();

@@ -35,6 +35,8 @@ public class GifDiscoverAdapter extends RecyclerView.Adapter<GifDiscoverAdapter.
 
     @NonNull
     @Override
+
+
     public GifDiscoverAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list,parent,false);
         return new ViewHolder(view);
@@ -46,6 +48,8 @@ public class GifDiscoverAdapter extends RecyclerView.Adapter<GifDiscoverAdapter.
                 .getMedia().get(0).getGif().getUrl())
                 .into(holder.ivThumb);
 
+        holder.tvTitle.setText(gifDiscoverItems.get(position).getTitle());
+        holder.tvShare.setText(String.valueOf(gifDiscoverItems.get(position).getShares()));
     }
 
     @Override
@@ -55,10 +59,12 @@ public class GifDiscoverAdapter extends RecyclerView.Adapter<GifDiscoverAdapter.
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView ivThumb;
-
+        TextView tvTitle,tvShare;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             ivThumb = itemView.findViewById(R.id.itemlist_iv_thumbnail);
+            tvTitle = itemView.findViewById(R.id.itemlist_tv_title);
+            tvShare = itemView.findViewById(R.id.itemlist_tv_share);
         }
     }
 }

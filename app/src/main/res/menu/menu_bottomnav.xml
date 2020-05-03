@@ -13,4 +13,10 @@
         android:icon="@drawable/search"
         app:showAsAction="ifRoom"/>
 
+    <item
+        android:id="@+id/btn_profil"
+        android:title="Profile"
+        android:icon="@drawable/profile"
+        app:showAsAction="ifRoom"/>
+
 </menu>
