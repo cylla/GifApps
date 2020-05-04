@@ -3,15 +3,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="	#E6E6FA"
+
     >
  <TextView
      android:id="@+id/tv_daftar"
      android:layout_width="match_parent"
      android:layout_height="wrap_content"
      android:text="PROFILE"
-     android:textSize="20dp"
+     android:textSize="30dp"
      android:layout_marginTop="10dp"
      android:gravity="center"
+     android:background="#808080"
+
      />
 
     <EditText
@@ -50,7 +54,9 @@
         android:layout_marginLeft="143dp"
         android:layout_marginTop="10dp"
         android:text="SIMPAN"
-        android:textColor="#FFFFFF" />
+        android:background="#808080"
+       />
+
     <Button
         android:id="@+id/btn_lihat"
         android:layout_width="100dp"

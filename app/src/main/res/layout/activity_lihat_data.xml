@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".database.LihatDataActivity">
+    tools:context=".database.LihatDataActivity"
+    android:background="#FFF8DC"
+    >
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_lihatdata"
